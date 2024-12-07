@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Carol</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Carol</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <button id="menu-toggle">☰</button>
-    <nav id="menu">
-      <a href="#about"><i class="fas fa-user"></i> Sobre Mim</a>
-      <a href="#projects"><i class="fas fa-briefcase"></i> Projetos</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Contato</a>
-    </nav>
-    <h1>Carol Dev</h1>
-  </header>
-
-  <!-- Seção Sobre Mim -->
-  <section id="about">
-    <h2>Sobre Mim</h2>
-    <p>Oi, eu sou a Carol, desenvolvedora apaixonada por criar soluções eficientes e intuitivas. Meu foco está em desenvolvimento back-end com Java, mas também trabalho com landing pages e outras ferramentas web!</p>
-  </section>
-
-  <!-- Seção Projetos -->
-  <section id="projects">
-    <h2>Meus Projetos</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>Landing Page 1</h3>
-        <a href="./landing-page1/index.html" target="_blank">Ver Projeto</a>
-      </div>
-      <div class="project-card">
-        <h3>Landing Page 2</h3>
-        <a href="./landing-page2/index.html" target="_blank">Ver Projeto</a>
-      </div>
-      <!-- Adicione mais projetos aqui -->
+  <!-- Blocos de Tela Inteira -->
+  <section class="blocks">
+    <div class="block" onclick="window.location.href='#about'">
+      <h2>Sobre Mim</h2>
+    </div>
+    <div class="block" onclick="window.location.href='#projects'">
+      <h2>Projetos</h2>
+    </div>
+    <div class="block" onclick="window.location.href='#services'">
+      <h2>Serviços</h2>
+    </div>
+    <div class="block" onclick="window.location.href='#contact'">
+      <h2>Contato</h2>
     </div>
   </section>
 
-  <!-- Seção Contato -->
-  <section id="contact">
-    <h2>Entre em Contato</h2>
-    <p>Envie uma mensagem para discutir projetos ou apenas para dizer oi!</p>
-    <form action="https://formspree.io/f/MEU_ID" method="POST">
-      <input type="text" name="name" placeholder="Seu Nome" required>
-      <input type="email" name="email" placeholder="Seu E-mail" required>
-      <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <!-- Rodapé -->
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Carolina Koike. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Carolina Koke. Todos os direitos reservados.</p>
+    <p>
+      <a href="https://github.com/carolinakoike" target="_blank" rel="noopener">GitHub</a> |
+      <a href="https://www.linkedin.com/in/carolina-koike/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
   </footer>
 </body>
 </html>
