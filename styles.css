@@ -1,26 +1,29 @@
-Reset Básico
+/* Reset Básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%; /* Define altura total para o HTML e body */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f5f5f5; /* Fundo mais claro */
+  background: #f5f5f5;
   color: #333;
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  flex-direction: column; /* Layout vertical */
+  justify-content: space-between; /* Garante que o footer fique no final */
 }
 
 /* Blocos */
 .blocks {
+  flex: 1; /* Faz os blocos ocuparem o espaço disponível */
   display: grid;
   grid-template-columns: 2fr 1fr; /* Estáticos ocupam 2 colunas, dinâmico ocupa 1 */
   grid-template-rows: 1fr 1fr; /* Distribuir em 2 linhas */
-  height: 100%;
   gap: 15px;
   padding: 15px;
 }
@@ -31,30 +34,30 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #003049, #D62828); 
+  background: linear-gradient(135deg, #003049, #D62828);
   color: white;
-  border-radius: 15px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  padding: 20px; /* Espaço interno */
+  padding: 20px;
 }
+
 .block.static {
-  grid-row: span 1; /* Cada bloco estático ocupa 1 linha */
+  grid-row: span 1;
 }
 
 #vision {
-  background: linear-gradient(135deg, #FFDD00, #FF9900); /* Gradiente dourado */
+  background: linear-gradient(135deg, #FFDD00, #FF9900);
 }
 
 #contact {
-  background: linear-gradient(135deg, #6A1B9A, #AB47BC); /* Gradiente roxo */
+  background: linear-gradient(135deg, #6A1B9A, #AB47BC);
 }
 
-/* Estilo para o bloco dinâmico */
 .block.dynamic {
-  grid-column: span 1; /* Ocupa 1 coluna */
-  grid-row: span 2; /* Ocupa 2 linhas */
-  background: linear-gradient(135deg, #009688, #00BFA5); /* Gradiente rosa */
+  grid-column: span 1;
+  grid-row: span 2;
+  background: linear-gradient(135deg, #009688, #00BFA5);
 }
 
 /* Hover */
@@ -93,14 +96,14 @@ body {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave nos botões */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
   background: #003049;
   color: white;
-  transform: scale(1.20);/* Elevação no hover */
+  transform: scale(1.20);
 }
 
 /* Ícones nos botões */
@@ -110,13 +113,9 @@ body {
 
 /* Rodapé */
 footer {
-  font-weight: bold;
   background: #000000;
   color: white;
   text-align: center;
   padding: 1rem;
-}
-
-footer p {
-  margin: 0.5rem 0;
+  margin-top: auto; /* Empurra o footer para o final */
 }
