@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column; /* Layout vertical */
   justify-content: space-between; /* Garante que o footer fique no final */
+  overflow: auto;
 }
 
 /* Blocos */
