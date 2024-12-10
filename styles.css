@@ -1,3 +1,4 @@
+Reset Básico
 * {
   margin: 0;
   padding: 0;
@@ -6,80 +7,108 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #EAE2B7; 
+  background: #f5f5f5; /* Fundo mais claro */
   color: #333;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /* Blocos */
 .blocks {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr; 
+  grid-template-columns: 2fr 1fr; /* Estáticos ocupam 2 colunas, dinâmico ocupa 1 */
+  grid-template-rows: 1fr 1fr; /* Distribuir em 2 linhas */
   height: 100%;
+  gap: 15px;
+  padding: 15px;
 }
 
 .block {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #000000;
+  background: linear-gradient(135deg, #003049, #D62828); 
   color: white;
-  border: 2px solid #333; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: default;
+  padding: 20px; /* Espaço interno */
+}
+.block.static {
+  grid-row: span 1; /* Cada bloco estático ocupa 1 linha */
 }
 
-.block:nth-child(2) {
-  background: #000000;   
+#vision {
+  background: linear-gradient(135deg, #FFDD00, #FF9900); /* Gradiente dourado */
+}
+
+#contact {
+  background: linear-gradient(135deg, #6A1B9A, #AB47BC); /* Gradiente roxo */
+}
+
+/* Estilo para o bloco dinâmico */
+.block.dynamic {
+  grid-column: span 1; /* Ocupa 1 coluna */
+  grid-row: span 2; /* Ocupa 2 linhas */
+  background: linear-gradient(135deg, #009688, #00BFA5); /* Gradiente rosa */
+}
+
+/* Hover */
+.block.dynamic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-}
-
-.block:nth-child(3) {
-  background: #000000; 
-  cursor: pointer;
-}
-
-.block:nth-child(4) {
-  background: #000000; 
-  cursor: default;
 }
 
 .block h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.block:nth-child(2):hover,
-.block:nth-child(3):hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+.block-content {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding: 10px;
 }
 
+.block p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Botões de Contato */
 .btn {
   display: inline-block;
-  margin: 5px 10px;
+  margin: 5px;
   padding: 10px 20px;
   background: white;
   color: #003049;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s, color 0.3s;
-  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave nos botões */
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
   background: #003049;
   color: white;
+  transform: scale(1.20);/* Elevação no hover */
 }
 
+/* Ícones nos botões */
+.btn i {
+  margin-right: 8px;
+}
+
+/* Rodapé */
 footer {
   font-weight: bold;
   background: #000000;

@@ -5,33 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carolina Koike</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   
   <!-- Blocos de Tela Inteira -->
   <section class="blocks">
-    <div class="block">
-      <h2>Transformo Visões em Realidade</h2>
-      <p>Com criatividade e inovação, concretizo ideias. Meu compromisso é conectar negócios e pessoas com soluções únicas.</p>
+    <div class="block static" id="vision">
+      <div class="block-content">
+        <h2>Dar nova forma a Visões em Realidade</h2>
+        <p>Com criatividade e inovação, concretizo ideias. Meu compromisso é conectar negócios e pessoas com soluções únicas.</p>
+      </div>
     </div>
-    <div class="block" onclick="window.location.href='#projects'">
-      <h2>Projetos</h2>
-      <p>Confira alguns dos trabalhos que desenvolvi.</p>
+    <div class="block dynamic" id="projects">
+      <div class="block-content">
+        <h2>Projetos</h2>
+        <p>Confira alguns dos trabalhos que desenvolvi.</p>
+      </div>
     </div>
-    <div class="block" onclick="window.location.href='#services'">
-      <h2>Especialidades</h2>
-      <p>Marcar horários, serviços web personalizados e landing pages criativas.</p>
-    </div>
-    <div class="block">
-      <h2>Vamos nos Conhecer?</h2>
-      <p>
-        <a href="https://github.com/carolinakoike" target="_blank" rel="noopener" class="btn">GitHub</a>
-        <a href="https://www.linkedin.com/in/carolina-koike/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
-        <a href="mailto:seuemail@exemplo.com" class="btn">E-mail</a>
-      </p>
+    <div class="block static" id="contact">
+      <div class="block-content">
+        <h2>Vamos nos Conhecer e criar algo incrível junt@s!?</h2>
+        <p>
+          <a href="https://github.com/carolinakoike" target="_blank" rel="noopener" class="btn">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/carolina-koike/" target="_blank" rel="noopener" class="btn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:seuemail@exemplo.com" class="btn">
+            <i class="fas fa-envelope"></i> E-mail
+          </a>
+        </p>
+      </div>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Carolina Koike. Todos os direitos reservados.</p>
