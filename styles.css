@@ -119,3 +119,36 @@ footer {
   padding: 1rem;
   margin-top: auto; /* Empurra o footer para o final */
 }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .blocks {
+    grid-template-columns: 1fr; /* Alinhar em uma única coluna */
+    grid-template-rows: repeat(3, 1fr); /* Cada card ocupa uma linha */
+    gap: 10px; /* Reduz o espaço entre os cards */
+    padding: 10px;
+  }
+
+  .block.dynamic {
+    grid-row: span 1; /* Ocupa apenas 1 linha */
+  }
+
+  .block {
+    padding: 15px;
+    font-size: 1.5rem;
+  }
+
+  .block h2 {
+    font-size: 1.5rem; /* Texto menor no mobile */
+  }
+
+  .block-content {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
